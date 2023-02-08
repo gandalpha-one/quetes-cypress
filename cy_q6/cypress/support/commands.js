@@ -23,21 +23,3 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-Cypress.Commands.add('enterEmail', (email) => {
-    cy.get('[data-test="email-input"]').type(email);
-    });
-
-Cypress.Commands.add('clickForgotPasswordButton', () => {
-    cy.get('[data-test="forgot-password-button"]').click();
-    });
-
-Cypress.Commands.add('clickResetPasswordButton', () => {
-    cy.get('[data-test="reset-password-button"]').click();
-    });
-
-    Cypress.Commands.add('getResetPasswordURL', (email) => {
-        return mailslurp.waitForLatestEmail(email).then((email) => {
-        const resetPasswordLink = email.body.match;
-        return resetPasswordLink;
-        });
-        });

@@ -4,15 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run",
+    "dev": "cypress open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^12.5.1"
+    "cypress": "^12.5.1",
+    "mailslurp-client": "^15.16.1"
   },
   "devDependencies": {
-    "cypress-mailslurp": "^1.6.0"
+    "cypress-mailslurp": "^1.6.0",
+    "typescript": "^4.9.5"
   }
 }
